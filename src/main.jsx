@@ -4,13 +4,15 @@ import './index.css'
 import App from './App.jsx'
 import About from './about.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-
+import LoginSignup from './Authpages/loginSign.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />}/>
      <Route path='/about' element={<About />}/>
+      <Route path='/auth' element={<LoginSignup />}/>
+  
     </Routes>
     </BrowserRouter>
   </StrictMode>,
