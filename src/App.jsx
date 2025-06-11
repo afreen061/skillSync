@@ -5,18 +5,18 @@ import './App.css'
 import axios from 'axios'
 function App() {
   const [count, setCount] = useState(0)
-const [data ,setData] = useState('')
+const [data ,setData] = useState([])
 
 useEffect(()=>{
-  const response = axios.get('http://localhost:3000/').then(response => {
-  console.log(response);
+  const response = axios.get('http://localhost:5000/').then(response => {
+  console.log("AAAA",response.data);
   setData(response.data);
   
 })
 console.log(response)
 },[])
 
-
+console.log(data)
   
 
   return (
@@ -32,7 +32,16 @@ console.log(response)
        <a href="/about">About</a>
        
        </div>
-       <div className="w-7/8">heello</div>
+       <div className="w-7/8">
+       
+       {
+        data.map((i,t)=>(
+<>
+<div key={t}>{i.name}</div>
+</>
+        ))
+       }
+       </div>
        
       </div>
      
