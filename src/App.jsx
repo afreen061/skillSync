@@ -5,15 +5,15 @@ import './App.css'
 import axios from 'axios'
 function App() {
   const [count, setCount] = useState(0)
-const [data ,setData] = useState('')
+const [data ,setData] = useState([])
 
 useEffect(()=>{
-  const response = axios.get('http://localhost:3000/').then(response => {
-  console.log(response);
+  const response = axios.get('http://localhost:5000/').then(response => {
+  console.log("response0",response.data);
   setData(response.data);
   
 })
-console.log(response)
+console.log("response",response)
 },[])
 
 
@@ -26,13 +26,17 @@ console.log(response)
         
       </div>
       
-      <div className="main flex flex-row">
-       <div className="w-1/8 w-[200px] bg-blue-300">
-       <div>Sidebar</div>
-       <a href="/about">About</a>
+      <div className="">
+       
+       <div className="">{data.map((t,index)=>(
+        <div key={index}>
+          {t.name}
+          {console.log(t.name)}
+        </div>
+       ))}
+       
        
        </div>
-       <div className="w-7/8">heello</div>
        
       </div>
      
