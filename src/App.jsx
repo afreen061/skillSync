@@ -9,14 +9,14 @@ const [data ,setData] = useState([])
 
 useEffect(()=>{
   const response = axios.get('http://localhost:5000/').then(response => {
-  console.log("response0",response.data);
+  console.log("AAAA",response.data);
   setData(response.data);
   
 })
 console.log("response",response)
 },[])
 
-
+console.log(data)
   
 
   return (
@@ -36,6 +36,16 @@ console.log("response",response)
        ))}
        
        
+       </div>
+       <div className="w-7/8">
+       
+       {
+        data.map((i,t)=>(
+<>
+<div key={t}>{i.name}</div>
+</>
+        ))
+       }
        </div>
        
       </div>
