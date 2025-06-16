@@ -7,13 +7,21 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import LoginSignup from './Authpages/loginSign.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+   <div className="main flex flex-row">
+      <div className="w-1/8 w-[200px] bg-blue-300">
+       <div>Sidebar</div>
+       <a href="/about">About</a>
+       
+       </div>
+        <div className="w-7/8 text-white">
+         <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />}/>
      <Route path='/about' element={<About />}/>
       <Route path='/auth' element={<LoginSignup />}/>
-  
-    </Routes>
+         </Routes>
     </BrowserRouter>
+  </div>
+ </div>
   </StrictMode>,
 )

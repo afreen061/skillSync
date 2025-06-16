@@ -13,7 +13,7 @@ useEffect(()=>{
   setData(response.data);
   
 })
-console.log(response)
+console.log("response",response)
 },[])
 
 console.log(data)
@@ -26,10 +26,15 @@ console.log(data)
         
       </div>
       
-      <div className="main flex flex-row">
-       <div className="w-1/8 w-[200px] bg-blue-300">
-       <div>Sidebar</div>
-       <a href="/about">About</a>
+      <div className="">
+       
+       <div className="">{data.map((t,index)=>(
+        <div key={index}>
+          {t.name}
+          {console.log(t.name)}
+        </div>
+       ))}
+       
        
        </div>
        <div className="w-7/8">
