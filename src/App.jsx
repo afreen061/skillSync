@@ -8,15 +8,15 @@ function App() {
 const [data ,setData] = useState([])
 
 useEffect(()=>{
-  const response = axios.get('http://localhost:5000/').then(response => {
-  console.log("AAAA",response.data);
-  setData(response.data);
+ axios.get('http://localhost:5000/').then(response => {
+
+  setData(response.data.list);
   
 })
-console.log("response",response)
+
 },[])
 
-console.log(data)
+console.log(data,"data")
   
 
   return (
@@ -31,13 +31,13 @@ console.log(data)
        <div className="">{data.map((t,index)=>(
         <div key={index}>
           {t.name}
-          {console.log(t.name)}
+          
         </div>
        ))}
        
        
        </div>
-       <div className="w-7/8">
+       {/* <div className="w-7/8">
        
        {
         data.map((i,t)=>(
@@ -46,7 +46,7 @@ console.log(data)
 </>
         ))
        }
-       </div>
+       </div> */}
        
       </div>
      

@@ -13,12 +13,12 @@ createRoot(document.getElementById('root')).render(
        <a href="/about">About</a>
        
        </div>
-        <div className="w-7/8 text-white">
+        <div className="w-7/8 ">
          <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />}/>
+      <Route path='/dashboad' element={<App />}/>
      <Route path='/about' element={<About />}/>
-      <Route path='/auth' element={<LoginSignup />}/>
+      <Route path='/' element={<LoginSignup />}/>
          </Routes>
     </BrowserRouter>
   </div>

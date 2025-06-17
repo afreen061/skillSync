@@ -28,7 +28,7 @@ const LoginSignup = () => {
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
         <div className="flex flex-col justify-center items-center w-[500px] h-[400px] space-y-4">
           <div className="flex flex-col w-full m-2">
-            <label className="mr-2 font-semibold">Name</label>
+            <label className="mr-2 font-semibold text-black">Name</label>
             <input
               value={data.name}
               type="text"
