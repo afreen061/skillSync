@@ -9,13 +9,11 @@ connectDb()
 app.use(cors());
 app.use(express.json())
 
-app.get('/',(req,res)=>{
-    res.send(user)
-})
+app.use('/',userRoutes)
 
 
 
-app.post('/user',userRoutes)
+app.use('/user',userRoutes)
 const PORT = process.env.PORT || 500
 app.listen(PORT,()=>{
     console.log(`Running at ${PORT} port`)
