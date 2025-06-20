@@ -13,7 +13,18 @@ res.status(201).json({message:"created",user})
 
 
 }
-
+const loginUser = async(req,res)=>{
+     const {email,password} = req.body;
+     const log = await User.findOne({email});
+     if(!log){
+          res.status(400).json({message:"not found"})
+     }
+     const passowrdCheck =await bcrypt.compare(password,log.password)
+     if(!passowrdCheck){
+          res.status(400).json({message:"Invalid"})
+     }
+     res.status(200).json({message:"data",log})
+}
 
 const getUserAll =async(req,res)=>{
 const {name}= req.query;
@@ -22,7 +33,8 @@ res.status(200).json({message:"user all ",list})
 }
 const UserController = {
      createUser,
-     getUserAll
+     getUserAll,
+     loginUser
 }
 
 export default UserController;

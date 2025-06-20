@@ -5,6 +5,7 @@ import App from './App.jsx'
 import About from './about.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import LoginSignup from './Authpages/loginSign.jsx'
+import LoginUser from './Authpages/login.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <div className="main flex flex-row">
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/dashboad' element={<App />}/>
      <Route path='/about' element={<About />}/>
       <Route path='/' element={<LoginSignup />}/>
+         <Route path='/login' element={<LoginUser />}/>
          </Routes>
     </BrowserRouter>
   </div>
