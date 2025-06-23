@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
 const LoginUser =()=>{
 const[data,setData]=useState(
@@ -8,9 +9,17 @@ const[data,setData]=useState(
 
     }
 )
+const navigate =useNavigate();
 const handlesubmit =async(e)=>{
       e.preventDefault()//render prevent 
-axios.post('http://localhost:5000/user/login',data)
+const res=await axios.post('http://localhost:5000/user/login',data)
+    console.log("Full response:", res);
+  const { token} = res.data;
+  localStorage.setItem("token",token) 
+  navigate('/dashboard')
+
+
+
 }
 const handleChange=async(e)=>{
   setData({  ...data,

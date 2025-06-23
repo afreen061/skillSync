@@ -1,6 +1,7 @@
 
 import bcrypt from 'bcryptjs'
 import User from '../model/user.js'
+import jwt from 'jsonwebtoken'
 
 const createUser = async(req,res)=>{
 const {name,email,password} = req.body
@@ -23,7 +24,10 @@ const loginUser = async(req,res)=>{
      if(!passowrdCheck){
           res.status(400).json({message:"Invalid"})
      }
-     res.status(200).json({message:"data",log})
+const token =jwt.sign({id:log._id},process.env.JWT_SECRET,{expiresIn:'1d'})
+
+
+     res.status(200).json({message:"data",token,log})
 }
 
 const getUserAll =async(req,res)=>{

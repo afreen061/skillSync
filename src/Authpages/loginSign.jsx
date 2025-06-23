@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import axios from 'axios'
-const LoginSignup=()=>{
+const LoginSignup=(props)=>{
 const[data,setData] =useState({
     name:'',
     email:'',
@@ -25,6 +25,7 @@ setData({...data, [e.target.name]:e.target.value}) ///
 return(
 
     <div className='flex justify-center items-center  h-screen w-full '>
+    
     <form className='flex p-6  justify-center items-center' onSubmit={handleSubmit}>
         <div className='flex flex-col justify-center items-center w-[500px] h-[400px]'>
 <div className='m-2'>
@@ -32,7 +33,7 @@ return(
      <div  className='m-2'>  <label>Email</label>   <input value={data.email} name="email" type="email" placeholder="Email"onChange={handleChange}/></div>
       <div  className='m-2'><label>Password</label>    <input value={data.password} name="password" type="password" placeholder='password' onChange={handleChange}/></div>
         <button>login</button>
-         <div className='text-[12px]'>Havn't SignUp yet</div>
+         <div className='text-[12px]'>Havn't SignUp yet     {props.name}</div>
     </div>
        </form>
  
