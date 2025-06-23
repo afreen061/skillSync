@@ -1,10 +1,10 @@
-import {useNavigate} from 'react-router-dom';
+import {Navigate,Outlet} from 'react-router-dom';
 const PrivateModel = ({children})=>{
-    const navigate = useNavigate();
+   
 const token=localStorage.getItem('token');
 
-token?children :navigate('/login')
+// token?<Outlet/> :<Navigate to="/login"/>
 
-
+ return token ? <Outlet /> : <Navigate to="/login" />;
 }
 export default PrivateModel
