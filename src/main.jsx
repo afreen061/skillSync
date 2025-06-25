@@ -5,10 +5,12 @@ import App from './App.jsx'
 import About from './about.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import LoginSignup from './page/Authpages/loginSign.jsx'
-import LoginUser from './page/Authpages/login.jsx'
+import LoginUser from './Page/Authpages/login.jsx'
+import TaskList from './Page/Task/index.jsx'
 import PrivateModel from './page/Authpages/private.jsx'
 import LayoutPage from './page/Authpages/layout.jsx'
 import AddEditTask from './Page/Task/AddEdittask.jsx'
+import AddEditSkill from './Page/Skill/AddEditSkill.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
@@ -21,6 +23,8 @@ createRoot(document.getElementById('root')).render(
       <Route path='/dashboard' element={<App />}/>
      <Route path='/about' element={<About />}/>
      <Route path='/task/add' element={<AddEditTask />}/>
+     <Route path='/task' element={<TaskList/>}/>
+      <Route path='/skill' element={<AddEditSkill/>}/>
      </Route>
      </Route>
          </Routes>

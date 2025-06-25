@@ -5,8 +5,14 @@ const task =await Task.create({name});
 
  res.status(201).json({message:"created",task})
 }
+
+const getAllTask= async (req,res)=>{
+  const task = await Task.find();
+  res.status(200).json({message:"data",task})  
+}
 const TaskController ={
-createTask
+createTask,
+getAllTask
 
 
 }
