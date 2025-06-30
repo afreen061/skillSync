@@ -10,6 +10,7 @@ const sidebar = () => {
     { label: "Task", path: "/calender" },
     { label: "setting", path: "/setting" },
     { label: "Logout", path: "/logout" },
+    
   ];
   return (
     <div className="flex flex-col">

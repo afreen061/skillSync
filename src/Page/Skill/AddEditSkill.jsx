@@ -9,9 +9,10 @@ const SkillSchema = Yup.object({
 
     const handleSubmit =(values)=>{
 const data ={
-    name:values.name
+    name:values.name,
+    description:values.description
 }
-axios.post('http://localhost:5000/skill',data)
+axios.post('http://localhost:5000/skill/add',data)
     }
 
 return(
@@ -23,13 +24,18 @@ return(
         name:''
     }}
     >
-        <Form>
+        <Form >
             <div className='flex flex-col'>
 <label>
     Name
 </label>
 <Field name='name' type='text'/>
+<label>
+    Description
+</label>
+<Field name='description' type='text'/>
 </div>
+<button type="submit">Submit</button>
         </Form>
 
 

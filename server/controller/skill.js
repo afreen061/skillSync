@@ -1,13 +1,13 @@
-import Skill from "../model/skill";
+import Skill from "../model/skill.js";
 const createSkill =(req,res)=>{
-    const {name}=req.body
-    const skill = Skill.create({name})
+    const {name,description}=req.body
+    const skill = Skill.create({name,description})
     res.status(201).json({message:"create",skill})
 }
 
 const getAllSkill =(req,res)=>{
-    const task = Skill.find()
-    res.status(200).json({message:"get all",task})
+    const skill = Skill.find()
+    res.status(200).json({message:"get all",skill})
 }
 
 const skillController={
