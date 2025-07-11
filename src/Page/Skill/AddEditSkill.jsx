@@ -21,7 +21,9 @@ return(
     validationSchema={SkillSchema}
     onSubmit={handleSubmit}
     initialValues={{
-        name:''
+        name:'',
+        category:'',
+        level:''
     }}
     >
         <Form >
