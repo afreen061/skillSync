@@ -21,10 +21,7 @@ console.log(data,"data")
 
   return (
     <>
-      <div>
-        
-        
-      </div>
+     
       
       <div className="">
        

@@ -28,18 +28,27 @@ const handleChange=async(e)=>{
 }
 return(
 
-<div>
-<form onSubmit={handlesubmit}>
-<div>
+<div className='flex justify-center items-center  h-screen w-full bg-white '>
+    <div className="bg-[#1A6FAB] p-8 ">
+<form className='flex justify-center items-center bg-white ' onSubmit={handlesubmit}>
+   <div className='flex flex-col justify-center items-center w-[300px] h-[400px] text-black'>
+   <div  className='m-2'>  <label className="mr-2">Email</label>  
+  
 <input type="email"value={data.email} name="email" placeholder="Email" onChange={handleChange}/>
 </div>
-<div>
+  <div  className='m-2'><label className="mr-2">Password</label> 
 <input type="text"value={data.password} name="password" placeholder="Password" onChange={handleChange}/>
 </div>
-<button type='submit'>login</button>
+<button type='submit' className="bg-[#1A6FAB] ">login</button>
+<div className="">
+<span> Haven't Sign up yet </span>
+<a href="/" className=" ">
+ click here
+</a></div>
+</div>
 </form>
 
-
+</div>
 
 </div>
 

@@ -35,10 +35,15 @@ const {name}= req.query;
 const list = await User.find();
 res.status(200).json({message:"user all ",list})
 }
+
+const logOut =(req,res)=>{
+     res.status(200).json({message:"logout"})
+}
 const UserController = {
      createUser,
      getUserAll,
-     loginUser
+     loginUser,
+     logOut
 }
 
 export default UserController;

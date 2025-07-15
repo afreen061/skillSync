@@ -5,8 +5,8 @@ const createSkill =(req,res)=>{
     res.status(201).json({message:"create",skill})
 }
 
-const getAllSkill =(req,res)=>{
-    const skill = Skill.find()
+const getAllSkill =async(req,res)=>{
+    const skill = await Skill.find()
     res.status(200).json({message:"get all",skill})
 }
 

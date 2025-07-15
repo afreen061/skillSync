@@ -8,9 +8,12 @@ import LoginSignup from './page/Authpages/loginSign.jsx'
 import LoginUser from './Page/Authpages/login.jsx'
 import TaskList from './Page/Task/index.jsx'
 import PrivateModel from './page/Authpages/private.jsx'
-import LayoutPage from './page/Authpages/layout.jsx'
+import LayoutPage from './Page/Authpages/layout.jsx'
 import AddEditTask from './Page/Task/AddEdittask.jsx'
 import AddEditSkill from './Page/Skill/AddEditSkill.jsx'
+// import SkillList from './Page/Skill/SkillList.jsx';
+  //namingS=
+import SkillList from './Page/Skill/index.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
@@ -24,7 +27,8 @@ createRoot(document.getElementById('root')).render(
      <Route path='/about' element={<About />}/>
      <Route path='/task/add' element={<AddEditTask />}/>
      <Route path='/task' element={<TaskList/>}/>
-      <Route path='/skill' element={<AddEditSkill/>}/>
+      <Route path='/skill/add' element={<AddEditSkill/>}/>
+        <Route path='/skill' element={<SkillList/>}/>
      </Route>
      </Route>
          </Routes>
