@@ -24,11 +24,13 @@ onSubmit={
 } >
 
     <Form>
-<label>Name</label>
+        <div className='flex justify-center items-center h-screen w-full'>
+<label className="text-black font-semibold ">Name</label>
 
-<Field name="name" type="string"/>
+<Field name="name" type="text" className="border border-2"/>
 
 <button type='submit'>Submit</button>
+</div>
     </Form>
     </Formik>
     

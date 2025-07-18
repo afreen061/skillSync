@@ -13,7 +13,7 @@ const LayoutPage =()=>{
    }
 return(
 <>
-   <div className="main flex flex-row bg-[#1A6FAB]">
+   <div className="main flex flex-row bg-white">
       <div className="w-1/8  bg-blue-300">
       <Sidebar/>
        

@@ -7,7 +7,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import LoginSignup from './page/Authpages/loginSign.jsx'
 import LoginUser from './Page/Authpages/login.jsx'
 import TaskList from './Page/Task/index.jsx'
-import PrivateModel from './page/Authpages/private.jsx'
+import PrivateModel from './Page/Authpages/private.jsx'
 import LayoutPage from './Page/Authpages/layout.jsx'
 import AddEditTask from './Page/Task/AddEdittask.jsx'
 import AddEditSkill from './Page/Skill/AddEditSkill.jsx'
@@ -19,8 +19,8 @@ createRoot(document.getElementById('root')).render(
 
          <BrowserRouter>
     <Routes>
- <Route path='/' element={<LoginSignup  name="Login"/>}/>
-         <Route path='/login' element={<LoginUser  />} />
+ <Route path='/' element={ <LoginUser   name="Login"/>}/>
+         <Route path='/login' element={<LoginSignup/>} />
  <Route  element={<PrivateModel />}>
  <Route element ={<LayoutPage/>}>
       <Route path='/dashboard' element={<App />}/>

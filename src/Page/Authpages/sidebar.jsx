@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 const sidebar = () => {
   const SidebarOption = [
-    { label: "About", path: "/about" },
     { label: "Dashboard", path: "/dashboard" },
+    { label: "About", path: "/about" },
     { label: "Task", path: "/task" },
     { label: "Skill", path: "/skill" },
     { label: "Profile", path: "/profile" },
