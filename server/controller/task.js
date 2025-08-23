@@ -1,7 +1,7 @@
 import Task from "../model/task.js";
 const createTask= async(req,res)=>{
-const {name} =req.body;
-const task =await Task.create({name});
+const payload=req.body;
+const task =await Task.create(payload);
 
  res.status(201).json({message:"created",task})
 }

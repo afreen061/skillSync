@@ -18,7 +18,7 @@ app.use('/',userRoutes)
 app.use('/user',userRoutes)
 app.use('/task',taskRoutes)
 app.use('/skill',skillRoutes)
-const PORT = process.env.PORT || 500
+const PORT = process.env.PORT || 5000
 app.listen(PORT,()=>{
     console.log(`Running at ${PORT} port`)
 })
