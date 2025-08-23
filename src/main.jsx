@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+
 import App from './App.jsx'
 import About from './about.jsx'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -11,6 +12,7 @@ import PrivateModel from './Page/Authpages/private.jsx'
 import LayoutPage from './Page/Authpages/layout.jsx'
 import AddEditTask from './Page/Task/AddEdittask.jsx'
 import AddEditSkill from './Page/Skill/AddEditSkill.jsx'
+import FormDataComponent from './Page/Other/form.jsx'
 // import SkillList from './Page/Skill/SkillList.jsx';
   //namingS=
 import SkillList from './Page/Skill/index.jsx'
@@ -28,7 +30,8 @@ createRoot(document.getElementById('root')).render(
      <Route path='/task/add' element={<AddEditTask />}/>
      <Route path='/task' element={<TaskList/>}/>
       <Route path='/skill/add' element={<AddEditSkill/>}/>
-        <Route path='/skill' element={<SkillList/>}/>
+        <Route path='/skill' element={<SkillList/>}/> 
+        <Route path='/other' element ={<FormDataComponent/>}/>
      </Route>
      </Route>
          </Routes>

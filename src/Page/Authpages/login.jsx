@@ -8,10 +8,20 @@ const LoginUser = () => {
   const navigate = useNavigate();
   const handlesubmit = async (e) => {
     e.preventDefault()
-    const res = await axios.post('http://localhost:5000/user/login', data)
-    const { token } = res.data;
-    localStorage.setItem("token", token)
-    navigate('/dashboard')
+    try {
+    
+      const res = await axios.post('http://localhost:5000/user/login', data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      const { token } = res.data;
+      localStorage.setItem("token", token)
+      navigate('/dashboard')
+    } catch (error) {
+      console.error('Login error:', error)
+      console.error('Error details:', error.response?.data || error.message)
+    }
   }
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value })
