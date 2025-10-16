@@ -36,7 +36,7 @@ const LoginUser = () => {
           <Button type="submit" variant="contained" color="primary" fullWidth>Login</Button>
           <Typography align="center" variant="body2">
             Haven't signed up yet?{' '}
-            <Link href="/">Click here</Link>
+            <Link href="/login">Click here</Link>
           </Typography>
         </Box>
       </Paper>

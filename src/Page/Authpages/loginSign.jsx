@@ -35,7 +35,7 @@ return(
         <button className="bg-[#1A6FAB] ">login</button>
          <div className="">
 <span>Already Sign Up  </span>
-<a href="/login" className=" ">
+<a href="/" className=" ">
 login here
 </a></div>
     </div>

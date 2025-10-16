@@ -2,8 +2,7 @@ const About =()=>{
     return(
         <>
         <div >
-        hello................
-        gghfgf
+        
         </div>
         </>
     )
